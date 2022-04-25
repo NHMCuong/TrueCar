@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.scss";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
         <title>
           TrueCar | New and Used Cars for Sale | Car Pricing and Reviews
@@ -17,15 +17,15 @@ const Home: NextPage = () => {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <Navbar />
-      </main>
-
+      <Navbar />
+      <div className={styles.container}>
+        <main className={styles.main}></main>
+      </div>
+      
       <footer className={styles.footer}>
         <Footer />
       </footer>
-    </div>
+    </>
   );
 };
 
