@@ -1,9 +1,11 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-import { pathName } from "../../constants/pathName";
-import { IFooter } from "../../models/footer";
+import Image from 'next/image';
+import { pathName, socialPath } from "constants/pathName";
+import { IFooter, ISocial } from "models/footer";
 import { MouseEvent } from 'react';
-
+import { AppStoreIcon, FacebookIcon, GooglePlayIcon, InstagramIcon, LinkedIcon, TwitterIcon, YoutubeIcon } from 'assets/icons';
+// import {} from "assets/icons/facebook.svg"
 const renderAbout: Array<IFooter> = [
   {
     title: 'Products',
@@ -45,6 +47,47 @@ const renderAbout: Array<IFooter> = [
   }
 ];
 
+const socialsLeft: Array<ISocial> = [
+  {
+    icon: FacebookIcon,
+    iconName: 'Facebook',
+    path: socialPath.FACEBOOK
+  },
+  {
+    icon: TwitterIcon,
+    iconName: 'Twitter',
+    path: socialPath.TWITTER
+  },
+  {
+    icon: InstagramIcon,
+    iconName: 'Instagram',
+    path: socialPath.INSTAGRAM
+  },
+  {
+    icon: LinkedIcon,
+    iconName: 'Linked',
+    path: socialPath.LINKED
+  },
+  {
+    icon: YoutubeIcon,
+    iconName: 'Youtube',
+    path: socialPath.YOUTUBE
+  }
+];
+
+const socialsRight: Array<ISocial> = [
+  {
+    icon: AppStoreIcon,
+    iconName: 'App Store',
+    path: socialPath.APP_STORE
+  },
+  {
+    icon: GooglePlayIcon,
+    iconName: 'Google Play',
+    path: socialPath.GOOGLE_PLAY
+  }
+]
+
 const Footer = () => {
   const router = useRouter();
 
@@ -70,10 +113,39 @@ const Footer = () => {
               </div>
             })}
           </div>
-          <div>Social</div>
-          <div>content</div>
+          <div className='grid grid-cols-2'>
+            <div className='flex justify-start'>
+              {socialsLeft && socialsLeft.map((el, idx) => {
+                return <a className='flex-[0_0_9%]' key={idx} href={el.path}><Image width='16px' height='16px' src={el.icon} alt={el.iconName} /></a>
+              })}
+            </div>
+            <div className='flex justify-end'>
+              {socialsRight && socialsRight.map((el, idx) => {
+                return <a key={idx} href={el.path} className="border border-[#343434] ml-[8px]"><Image width='128px' height='35px' src={el.icon} alt={el.iconName} /></a>
+              })}
+            </div>
+          </div>
+          <div className='text-center text-[12px] grid grid-cols-1 gap-y-[10px]'>
+            <div>
+              <span className='font-radikal-regular'>For questions about the TrueCar Auto Buying Service please call </span> <span className='text-[#999999]'>1-888-878-3227</span> <span>.</span>
+            </div>
+            <div>
+              <span className='font-radikal-regular'>Certified Dealers are contractually obligated by TrueCar to meet certain customer service requirements and complete the TrueCar Dealer Certification Program.</span>
+            </div>
+            <div>
+              <span className='font-radikal-regular'>TrueCar does not broker, sell, or lease motor vehicles. Unless otherwise noted, all vehicles shown on this website are offered for sale by licensed motor
+                vehicle dealers. All vehicles are subject to prior sale. By accessing this website, you agree to the TrueCar Terms of Service and Privacy Policy.</span>
+            </div>
+            <div className='text-[#999999] flex justify-center gap-x-1'>
+              <span>Terms of Service</span>
+              <span className='text-white'>|</span>
+              <span>Privacy Policy</span>
+              <span className='text-white'>|</span>
+              <span>Do Not Sell My Personal Information</span>
+            </div>
+          </div>
         </div>
-        <div>Copy right</div>
+        <div className='text-center py-[50px] px-[15px]'>© and ™ TrueCar, Inc. All rights reserved. Vehicle photos © Evox Images © 1986-2022 Chrome Data Solutions, LP</div>
       </footer>
     </div>
   );
