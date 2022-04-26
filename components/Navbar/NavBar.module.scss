@@ -1,0 +1,7 @@
+@import "../../styles/app.scss";
+
+.navbar-container {
+    padding: 0 2rem;
+    background-color: white;
+    @include flex-display(row, center, space-between);
+}
