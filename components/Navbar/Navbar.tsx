@@ -191,7 +191,7 @@ const Navbar = () => {
           <div className="flex items-center mx-7">
             <Link href="">
               <a className="text-black text-[18px] hover:text-black hover:underline mr-2">
-                Sign-up
+                Sign up
               </a>
             </Link>
             <UserOutlined className="text-[22px] ml-2" />
