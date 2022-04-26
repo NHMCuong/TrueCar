@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      'radikal-bold': ['Radikal Bold', 'Helvetica', 'Arial', 'sans-serif']
+    }
   },
   plugins: [],
 }
