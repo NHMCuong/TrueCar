@@ -18,10 +18,10 @@
     "paths": {
       "@/components/*": ["components/*"],
       "@/helpers/*": ["helpers/*"],
-      "@/redux/*": ["redux/*"],
+      "@/redux/*": ["store/*"],
       "@/styles/*": ["styles/*"],
       "@/pages/*": ["pages/*"],
-      "@/constants/*": ["constants/*"]
+      "@/constants/*": ["constants/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

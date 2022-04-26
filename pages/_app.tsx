@@ -2,7 +2,7 @@ import "../styles/globals.scss";
 import "antd/dist/antd.css";
 
 import type { AppProps } from "next/app";
-import { store, wrapper } from "../redux/store";
+import { store, wrapper } from "../store/store";
 import { Provider } from "react-redux";
 import Layout from "components/Layout/Layout";
 
