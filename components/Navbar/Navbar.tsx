@@ -112,7 +112,7 @@ const Navbar = () => {
 
   return (
     <header>
-      <div className="container mx-auto flex items-center justify-between">
+      <div className="container mx-auto flex items-center justify-between h-[60px]">
         <img
           src="https://consumer.tcimg.net/assets/_next/static/images/tc-logo-black-500-5b9752820428fd08072ac20b14965287.png?h=39&w=133"
           alt="True Car"
