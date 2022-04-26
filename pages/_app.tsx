@@ -4,7 +4,7 @@ import "antd/dist/antd.css";
 import type { AppProps } from "next/app";
 import { store, wrapper } from "../redux/store";
 import { Provider } from "react-redux";
-import Layout from "../components/Layout/layout";
+import Layout from "components/Layout/Layout";
 
 function TrueCar({ Component, pageProps }: AppProps) {
   return (

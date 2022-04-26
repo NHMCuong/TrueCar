@@ -126,8 +126,8 @@ const Navbar = () => {
                 placeholder={<div className="text-[18px] text-black">New</div>}
                 dropdownStyle={{ minWidth: "220px", padding: "20px" }}
               >
-                {routerNew.map((route: { url: string; title: string }) => (
-                  <Select.Option value={route.title}>
+                {routerNew.map((route: { url: string; title: string }, idx: number) => (
+                  <Select.Option value={route.title} key={idx}>
                     <Link href={route.url}>
                       <a className="text-black text-[18px] hover:text-black hover:underline">
                         {route.title}
@@ -143,8 +143,8 @@ const Navbar = () => {
                 placeholder={<div className="text-[18px] text-black">Used</div>}
                 dropdownStyle={{ minWidth: "250px", padding: "20px" }}
               >
-                {routeUsed.map((route: { url: string; title: string }) => (
-                  <Select.Option value={route.title}>
+                {routeUsed.map((route: { url: string; title: string }, idx: number) => (
+                  <Select.Option value={route.title} key={idx}>
                     <Link href={route.url}>
                       <a className="text-black text-[18px] hover:text-black hover:underline">
                         {route.title}
@@ -162,8 +162,8 @@ const Navbar = () => {
                 }
                 dropdownStyle={{ minWidth: "270px", padding: "20px" }}
               >
-                {routeReseach.map((route: { url: string; title: string }) => (
-                  <Select.Option value={route.title}>
+                {routeReseach.map((route: { url: string; title: string }, idx: number) => (
+                  <Select.Option value={route.title} key={idx}>
                     <Link href={route.url}>
                       <a className="text-black text-[18px] hover:text-black hover:underline">
                         {route.title}
