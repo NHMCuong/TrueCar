@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 
 interface LayoutProps {
@@ -20,6 +21,7 @@ export default function Layout({ children }: LayoutProps) {
       </Head>
       <Navbar />
       {children}
+      <Footer />
     </>
   );
 }
