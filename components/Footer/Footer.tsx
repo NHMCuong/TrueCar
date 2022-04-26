@@ -1,8 +1,8 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
-import { pathName, socialPath } from "constants/pathName";
-import { IFooter, ISocial } from "models/footer";
+import { newPath, pathName, researchPath, socialPath, usedPath } from "helpers/constants";
+import { IFooter, ISocial } from "types/footer";
 import { MouseEvent } from 'react';
 import { AppStoreIcon, FacebookIcon, GooglePlayIcon, InstagramIcon, LinkedIcon, TwitterIcon, YoutubeIcon } from 'assets/icons';
 // import {} from "assets/icons/facebook.svg"
@@ -10,10 +10,10 @@ const renderAbout: Array<IFooter> = [
   {
     title: 'Products',
     child: [
-      { title: 'Used', path: pathName.USED },
-      { title: 'New', path: pathName.NEW },
+      { title: 'Used', path: usedPath.USED_CAR_RESEARCH },
+      { title: 'New', path: newPath.NEW_CARD_LISTINGS },
       { title: 'Sell/Trade', path: pathName.SELL_TRADE },
-      { title: 'EV', path: pathName.EV },
+      { title: 'EV', path: researchPath.ELECTRIC_VEGICLES },
       { title: 'Military', path: pathName.MILITARY },
       { title: 'Buy Online', path: pathName.BUY_ONLINE },
       { title: 'Site Map', path: pathName.SITE_MAP },

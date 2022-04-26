@@ -1,3 +1,4 @@
+import { newPath, researchPath, usedPath } from "helpers/constants";
 import { UserOutlined } from "@ant-design/icons";
 import { Divider, Select } from "antd";
 import Link from "next/link";
@@ -7,105 +8,105 @@ import styles from "./NavBar.module.scss";
 const Navbar = () => {
   const routerNew: any = [
     {
-      url: "/shop/new",
+      url: newPath.BUILD_AND_PRICE,
       title: "Build and Price",
     },
     {
-      url: "/deals",
+      url: newPath.DEALS,
       title: "Deals",
     },
     {
-      url: "/new-cars-for-sale/listings",
+      url: newPath.NEW_CARD_LISTINGS,
       title: "New Car Listings",
     },
     {
-      url: "/new-cars-for-sale/listings/body-truck",
+      url: newPath.NEW_TRUCKS,
       title: "New Trucks",
     },
     {
-      url: "/new-cars-for-sale/listings/body-suv",
+      url: newPath.NEW_SUV,
       title: "New SUVs",
     },
     {
-      url: "/new-cars-for-sale/listings/body-van",
+      url: newPath.NEW_VANS,
       title: "New Vans",
     },
     {
-      url: "/new-cars-for-sale/listings/body-convertible",
+      url: newPath.NEW_CONVERTIBLES,
       title: "New Convertibles",
     },
     {
-      url: "/new-cars-for-sale/listings/fuel-electric",
+      url: newPath.NEW_EV,
       title: "New EVs",
     },
   ];
 
   const routeUsed = [
     {
-      url: "/used-cars-for-sale",
+      url: usedPath.USED_CAR_RESEARCH,
       title: "Used Car Research",
     },
     {
-      url: "/used-cars-for-sale/listings",
+      url: usedPath.USED_CARD_LISTINGS,
       title: "Used Car Listings",
     },
     {
-      url: "/used-cars-for-sale/listings/body-truck",
+      url: usedPath.USED_TRUCKS,
       title: "Used Trucks",
     },
     {
-      url: "/used-cars-for-sale/listings/body-suv",
+      url: usedPath.USED_SUV,
       title: "Used SUVs",
     },
     {
-      url: "/used-cars-for-sale/listings/body-van",
+      url: usedPath.USED_VANS,
       title: "Used Vans",
     },
     {
-      url: "/used-cars-for-sale/listings/body-convertible",
+      url: usedPath.USED_CONVERTIBLES,
       title: "Used Convertibles",
     },
     {
-      url: "/used-cars-for-sale/listings/fuel-electric",
+      url: usedPath.USED_EV,
       title: "Used EVs",
     },
   ];
 
   const routeReseach = [
     {
-      url: "/car-reviews",
+      url: researchPath.CAR_REVIEWS,
       title: "Car Reviews",
     },
     {
-      url: "/best-cars-trucks",
+      url: researchPath.CARD_RANKINGS,
       title: "Car Rankings",
     },
     {
-      url: "/compare",
+      url: researchPath.COMPARE_CARS,
       title: "Compare Cars",
     },
     {
-      url: "/car-loan-calculator",
+      url: researchPath.AUTO_LOAN_CALCULATOR,
       title: "Auto Loan Calculator",
     },
     {
-      url: "/car-lease-calculator",
+      url: researchPath.AUTO_LEASE_CALCULATOR,
       title: "Auto Lease Calculator",
     },
     {
-      url: "https://www.truecar.com/blog/",
+      url: researchPath.ARTICLES_SHOPPING_GUIDES,
       title: "Articles & Shopping Guides",
     },
     {
-      url: "/l/lease-a-car",
+      url: researchPath.LEASE_CAR,
       title: "Lease a Car",
     },
     {
-      url: "/electric",
+      url: researchPath.ELECTRIC_VEGICLES,
       title: "Electric Vegicles",
     },
     {
-      url: "/research",
+      url: researchPath.RESEARCH_CENTER,
       title: "Research Center",
     },
   ];
