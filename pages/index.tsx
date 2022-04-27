@@ -1,3 +1,4 @@
+import { FindCard } from "@/components/FindCard/FindCard";
 import type { NextPage } from "next";
 
 import styles from "styles/Home.module.scss";
@@ -8,6 +9,7 @@ const Home: NextPage = () => {
     <>
       <div>
         <main className={styles.main}>
+          <FindCard />
           <BrowseByBrand />
         </main>
       </div>

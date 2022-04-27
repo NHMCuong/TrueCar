@@ -5,7 +5,7 @@ import { newPath, pathName, researchPath, socialPath, usedPath } from "helpers/c
 import { IFooter, ISocial } from "types/footer";
 import { MouseEvent } from 'react';
 import { AppStoreIcon, FacebookIcon, GooglePlayIcon, InstagramIcon, LinkedIcon, TwitterIcon, YoutubeIcon } from 'assets/icons';
-// import {} from "assets/icons/facebook.svg"
+
 const renderAbout: Array<IFooter> = [
   {
     title: 'Products',

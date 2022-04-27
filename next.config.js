@@ -10,6 +10,7 @@ module.exports = withImages({
   images: {
     disableStaticImages: true,
     domains: ["static.tcimg.net"],
+    domains: ['consumer.tcimg.net']
   },
   webpack(config, options) {
     return config;
