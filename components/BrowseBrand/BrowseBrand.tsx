@@ -27,7 +27,6 @@ export const BrowseByBrand = () => {
                 className={`${styles["switch"]} ${
                   swith === "new" ? `${styles.active}` : ""
                 }`}
-                href="#"
                 onClick={() => setSwitch("new")}
               >
                 New Cars
@@ -36,7 +35,6 @@ export const BrowseByBrand = () => {
                 className={`${styles["switch"]} ${
                   swith === "used" ? `${styles.active}` : ""
                 }`}
-                href="#"
                 onClick={() => setSwitch("used")}
               >
                 Used Cars
