@@ -43,8 +43,8 @@ export const BrowseByBrand = () => {
           </div>
           {swith === "new" && (
             <Row gutter={[10, 30]}>
-              {newCar.map((e: any) => (
-                <Col xxl={6} xl={6} lg={6} md={8} sm={8} xs={12}>
+              {newCar.map((e, idx) => (
+                <Col key={idx} xxl={6} xl={6} lg={6} md={8} sm={8} xs={12}>
                   <div
                     className="flex"
                     onClick={() => {
@@ -64,8 +64,8 @@ export const BrowseByBrand = () => {
           )}
           {swith === "used" && (
             <Row gutter={[10, 30]}>
-              {usedCar.map((e: any) => (
-                <Col xxl={6} xl={6} lg={6} md={8} sm={8} xs={12}>
+              {usedCar.map((e, idx) => (
+                <Col key={idx} xxl={6} xl={6} lg={6} md={8} sm={8} xs={12}>
                   <div className="flex">
                     <div className="w-[30px] h-[30px] mr-5">
                       <Image src={e.logo} alt={e.name} width={30} height={30} />

@@ -13,8 +13,8 @@ const Home: NextPage = () => {
         <main className={styles.main}>
           <FindCard />
           <BrowseByBrand />
-          <SearchAndReview />
           <TopVehicle />
+          <SearchAndReview />
         </main>
       </div>
     </>
