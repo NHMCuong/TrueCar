@@ -37,3 +37,12 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.cutomize-select-box {
+  .ant-select-single .ant-select-selector {
+    border-radius: 20px !important;
+  }
+  .ant-select-single .ant-select-selector:focus {
+    border-color: rgb(0, 136, 214);
+  }
+}
