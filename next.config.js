@@ -9,7 +9,7 @@ module.exports = nextConfig;
 module.exports = withImages({
   images: {
     disableStaticImages: true,
-    domains: ["static.tcimg.net"],
+    domains: ["static.tcimg.net", "consumer.tcimg.net"],
   },
   webpack(config, options) {
     return config;

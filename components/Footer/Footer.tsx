@@ -5,7 +5,7 @@ import { newPath, pathName, researchPath, socialPath, usedPath } from "helpers/c
 import { IFooter, ISocial } from "types/footer";
 import { MouseEvent } from 'react';
 import { AppStoreIcon, FacebookIcon, GooglePlayIcon, InstagramIcon, LinkedIcon, TwitterIcon, YoutubeIcon } from 'assets/icons';
-// import {} from "assets/icons/facebook.svg"
+
 const renderAbout: Array<IFooter> = [
   {
     title: 'Products',
@@ -108,7 +108,6 @@ const Footer = () => {
                   {el.child && el.child.map((e, i) => {
                     return <li onClick={(event) => handleRedirectPage(event, e.path)} className="underline underline-offset-1 text-base text-[#999999] leading-[2] cursor-pointer" key={i}>{e.title}</li>
                   })}
-                  <li></li>
                 </ul>
               </div>
             })}

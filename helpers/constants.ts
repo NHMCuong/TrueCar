@@ -16,7 +16,8 @@ export const pathName = {
   CAREERS: 'https://truecar.wd1.myworkdayjobs.com/careers',
   PRESS: 'https://ir.truecar.com/press-releases/',
   DEVELOPERS: 'https://medium.com/driven-by-code/',
-  INVESTORS: 'https://ir.truecar.com/'
+  INVESTORS: 'https://ir.truecar.com/',
+  TRADE: '/trade'
 }
 
 export const socialPath = {
@@ -47,7 +48,8 @@ export const usedPath = {
   USED_SUV: '/used-cars-for-sale/listings/body-suv',
   USED_VANS: '/used-cars-for-sale/listings/body-van',
   USED_CONVERTIBLES: '/used-cars-for-sale/listings/body-convertible',
-  USED_EV: '/used-cars-for-sale/listings/fuel-electric'
+  USED_EV: '/used-cars-for-sale/listings/fuel-electric',
+  SHOP_USED: '/shop/used'
 }
 
 export const researchPath = {

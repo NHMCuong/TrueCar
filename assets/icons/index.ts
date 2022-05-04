@@ -5,6 +5,8 @@ import TwitterIcon from "assets/icons/twitter.svg";
 import YoutubeIcon from "assets/icons/youtube.svg";
 import AppStoreIcon from "assets/icons/app-store.svg";
 import GooglePlayIcon from "assets/icons/google-play.svg";
+import CheckedIcon from "assets/icons/checked.svg";
+import SettingIcon from "assets/icons/setting.svg";
 
 export {
   FacebookIcon,
@@ -13,5 +15,7 @@ export {
   TwitterIcon,
   YoutubeIcon,
   AppStoreIcon,
-  GooglePlayIcon
+  GooglePlayIcon,
+  CheckedIcon,
+  SettingIcon
 }

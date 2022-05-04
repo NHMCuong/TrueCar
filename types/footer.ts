@@ -13,3 +13,8 @@ export interface ISocial {
   iconName: string;
   path: string;
 }
+
+export interface IMedia {
+  icon: any;
+  content: string;
+}
