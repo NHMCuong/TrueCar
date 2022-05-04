@@ -2,20 +2,23 @@ import Image from 'next/image';
 import Military from "assets/images/military.png";
 import styles from "./FindCard.module.scss";
 import { useRouter } from 'next/router';
-import { MouseEvent } from 'react';
+import { MouseEvent, useState } from 'react';
 import { newPath, pathName, usedPath } from '@/helpers/constants';
 import { Modal, Button } from 'antd';
 
-const ContentModal = () => {
-  return <div>
-    <div>image</div>
-    <span>{`You're in control of creating a deal that works for you.`}</span>
-  </div>
-}
+import { IMedia } from 'types/footer';
+import { CheckCircleOutlined, SettingOutlined } from '@ant-design/icons';
+
+const mediaList: Array<IMedia> = [
+  { icon: <CheckCircleOutlined height="26px" width="26px" />, content: 'Customize your monthly payments' },
+  { icon: <CheckCircleOutlined height="26px" width="26px" />, content: 'Get an actual dealer offer for your trade-in' },
+  { icon: <CheckCircleOutlined height="26px" width="26px" />, content: `Know every detail of what's in your deal` },
+]
 
 export const FindCard = () => {
 
   const router = useRouter();
+  const [visiable, setVisibale] = useState<boolean>(false);
 
   const handleRedirectPage = (e: MouseEvent, path: string) => {
     e.preventDefault();
@@ -24,15 +27,10 @@ export const FindCard = () => {
   }
 
   const handleConfirm = () => {
-    Modal.confirm({
-      title: null,
-      content: 'dsdsds',
-      okText: 'oki',
-      cancelText: 'cancel'
-    })
+    setVisibale(true);
   }
 
-  return (<div className="width-full">
+  return (<div className="w-full">
     <div className={styles.BuildYourDeal}>
       <div className={styles.Container}>
         <div className='flex flex-row justify-center items-center text-center'>
@@ -74,5 +72,42 @@ export const FindCard = () => {
         </div>
       </div>
     </div>
+    <Modal
+      visible={visiable}
+      title={null}
+      footer={null}
+      onCancel={() => setVisibale(false)}
+      width='660px'
+    >
+      <div className='py-[2.5rem] px-[5.3125rem] bg-white'>
+        <div className='flex flex-col items-center'>
+          <div className='w-[100px] h-[100px]'>
+            <Image src="https://consumer.tcimg.net/assets/_next/static/images/deal-builder-car-poke-7e6b57f4cefe1083952ba20e2981632c.svg" alt="" height='100%' width='100%' />
+          </div>
+          <h2 className='font-radikal-bold text-[22px] text-center'>{`You're in control of creating a deal that works for you.`}</h2>
+          <div className='w-full mb-[30px]'>
+            <ul>
+              {
+                mediaList && mediaList.map((e, idx) => {
+                  return <li key={idx} className="mb-[10px]">
+                    <div className='flex'>
+                      <div>{e.icon}</div>
+                      <p className='m-0 ml-4 text-base font-radikal-regular'>{e.content}</p>
+                    </div>
+                  </li>
+                })
+              }
+            </ul>
+          </div>
+          <div className="flex items-center justify-start w-full">
+            <SettingOutlined width="26px" height="26px" />
+            <p className='m-0 ml-4 text-base font-radikal-regular'>Look for the customize your deal icon when choosing dealerships to connect with.</p>
+          </div>
+          <div className="font-radikal-bold text-base w-full text-center mt-[30px]">
+            <Button onClick={(e) => setVisibale(false)} className='w-3/6' type="primary" shape="round">Ok</Button>
+          </div>
+        </div>
+      </div>
+    </Modal>
   </div>)
 }

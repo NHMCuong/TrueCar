@@ -108,7 +108,6 @@ const Footer = () => {
                   {el.child && el.child.map((e, i) => {
                     return <li onClick={(event) => handleRedirectPage(event, e.path)} className="underline underline-offset-1 text-base text-[#999999] leading-[2] cursor-pointer" key={i}>{e.title}</li>
                   })}
-                  <li></li>
                 </ul>
               </div>
             })}
