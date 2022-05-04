@@ -15,7 +15,7 @@ export const BrowseByBrand = () => {
   const [swith, setSwitch] = useState("new");
 
   return (
-    <div className="w-full">
+    <div className="w-full pb-[4.0625rem]">
       <section>
         <div className="container m-auto max-w-[1024px]">
           <div className="text-center mb-8">
