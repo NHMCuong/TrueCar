@@ -11,6 +11,7 @@ module.exports = withImages({
     disableStaticImages: true,
     domains: ["static.tcimg.net", "consumer.tcimg.net"],
   },
+  reactStrictMode: true,
   webpack(config, options) {
     return config;
   },

@@ -36,7 +36,7 @@ export const FindCard = () => {
         <div className={styles.Container}>
           <div className='flex flex-row justify-center items-center text-center'>
             <div className='h-[40px] w-[40px]'>
-              <Image src="https://consumer.tcimg.net/assets/_next/static/images/deal-builder-phone-woman-616ed1c091d6205e252e1d81e3f3ec38.svg" width="100%" height="100%" alt='not found' />
+              {/* <Image src="https://consumer.tcimg.net/assets/_next/static/images/deal-builder-phone-woman-616ed1c091d6205e252e1d81e3f3ec38.svg" width="100%" height="100%" alt='not found' /> */}
             </div>
             <div className='flex flex-row gap-x-2 text-white'>
               <p className='m-0'>Build Your Deal: Create a personalized deal, customize your payment, and evaluate your trade-in – all online.</p>
@@ -60,7 +60,7 @@ export const FindCard = () => {
             <div className={styles.ExclusiveMilitary}>
               <div className="p-[10px] w-full h-full flex flex-row items-center text-left">
                 <div className="mr-2.5 h-[34px] w-[34px]">
-                  <Image src={Military} width="34px" height="34px" alt="https://www.truecar.com/military/" />
+                  {/* <Image src={Military} width="34px" height="34px" alt="https://www.truecar.com/military/" /> */}
                 </div>
                 <p className='m-0'>
                   <span className='font-radikal-bold'>Exclusive Military Incentives Available</span>
@@ -73,7 +73,7 @@ export const FindCard = () => {
           </div>
         </div>
       </div>
-      <Modal
+      {/* <Modal
         visible={visiable}
         title={null}
         footer={null}
@@ -109,7 +109,7 @@ export const FindCard = () => {
             </div>
           </div>
         </div>
-      </Modal>
+      </Modal> */}
     </div>
   </div>)
 }

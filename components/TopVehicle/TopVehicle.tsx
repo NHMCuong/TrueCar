@@ -13,11 +13,11 @@ export const TopVehicle = () => {
             </h2>
           </div>
           <Row gutter={[5, 25]}>
-            {topVehicle.map((e: any) => (
-              <Col xxl={8} xl={8} lg={8} md={12} sm={12} xs={24}>
+            {topVehicle.map((e, idx) => (
+              <Col key={idx} xxl={8} xl={8} lg={8} md={12} sm={12} xs={24}>
                 <Card className="shadow-lg w-[300px] text-center cursor-pointer">
                   <div>
-                    <Image src={e.img} width={100} height={50}/>
+                    {/* <Image src={e.img} width={100} height={50}/> */}
                   </div>
                   <div className="font-[700] text-[0.875rem] pt-2">{e.title}</div>
                 </Card>

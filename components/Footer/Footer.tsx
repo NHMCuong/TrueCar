@@ -114,14 +114,14 @@ const Footer = () => {
           </div>
           <div className='grid grid-cols-2'>
             <div className='flex justify-start'>
-              {socialsLeft && socialsLeft.map((el, idx) => {
+              {/* {socialsLeft && socialsLeft.map((el, idx) => {
                 return <a className='flex-[0_0_9%]' key={idx} href={el.path}><Image width='16px' height='16px' src={el.icon} alt={el.iconName} /></a>
-              })}
+              })} */}
             </div>
             <div className='flex justify-end'>
-              {socialsRight && socialsRight.map((el, idx) => {
+              {/* {socialsRight && socialsRight.map((el, idx) => {
                 return <a key={idx} href={el.path} className="border border-[#343434] ml-[8px]"><Image width='128px' height='35px' src={el.icon} alt={el.iconName} /></a>
-              })}
+              })} */}
             </div>
           </div>
           <div className='text-center text-[12px] grid grid-cols-1 gap-y-[10px]'>

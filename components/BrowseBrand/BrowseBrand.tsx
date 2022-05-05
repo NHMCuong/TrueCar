@@ -52,7 +52,7 @@ export const BrowseByBrand = () => {
                     }}
                   >
                     <div className="w-[30px] h-[30px] mr-5">
-                      <Image src={e.logo} alt={e.name} width={30} height={30} />
+                      {/* <Image src={e.logo} alt={e.name} width={30} height={30} /> */}
                     </div>
                     <div className="flex items-center justify-start">
                       <p className="m-0">{e.name}</p>
@@ -68,7 +68,7 @@ export const BrowseByBrand = () => {
                 <Col key={idx} xxl={6} xl={6} lg={6} md={8} sm={8} xs={12}>
                   <div className="flex">
                     <div className="w-[30px] h-[30px] mr-5">
-                      <Image src={e.logo} alt={e.name} width={30} height={30} />
+                      {/* <Image src={e.logo} alt={e.name} width={30} height={30} /> */}
                     </div>
                     <div className="flex items-center justify-start">
                       <p className="m-0">{e.name}</p>
