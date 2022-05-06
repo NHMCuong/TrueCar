@@ -49,12 +49,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
   );
   return {
     paths: params,
-    fallback: true // false or 'blocking'
+    fallback: false // false or 'blocking'
   };
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
-  const { params } = context;
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const result = await fetch(`http://localhost:3300/api/class/${params?.mockId || ''}`);
   const data = await result.json();
   return {

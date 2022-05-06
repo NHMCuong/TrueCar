@@ -49,9 +49,7 @@ const MockApi: NextPage<{ data: any }> = ({ data }) => {
 //   }
 // }
 
-export const getServerSideProps: GetServerSideProps = async ({
-  res
-}) => {
+export const getStaticProps: GetStaticProps = async () => {
   try {
     // const result = await fetch(`http://localhost:3300/api/class?_page=1&_limit=20`);
     const result = await fetch(`http://localhost:3300/api/class?_page=1&_limit=20`);
@@ -61,7 +59,6 @@ export const getServerSideProps: GetServerSideProps = async ({
       props: { data }
     };
   } catch (error) {
-    res.statusCode = 404;
     return {
       props: {}
     };
