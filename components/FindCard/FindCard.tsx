@@ -73,7 +73,7 @@ export const FindCard = () => {
           </div>
         </div>
       </div>
-      {/* <Modal
+      <Modal
         visible={visiable}
         title={null}
         footer={null}
@@ -109,7 +109,7 @@ export const FindCard = () => {
             </div>
           </div>
         </div>
-      </Modal> */}
+      </Modal>
     </div>
   </div>)
 }
